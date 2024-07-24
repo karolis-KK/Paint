@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<style>
+    .no-drag {
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    cursor: default;
+}
+</style>
+<body class="flex justify-center items-center flex-col bg-neutral-200 h-screen">
+    <div class="flex">
+        <input id="squaresInput" type="text" class="py-3 px-4 rounded-lg text-sm" placeholder="Enter number of squares">
+        <button id="confirmBtn" class="ml-8 bg-neutral-400 rounded-xl px-4 py-2 scale-90 text-neutral-100 hover:bg-neutral-500">Confirm</button>
+        <button id="resetBtn" class="ml-2 bg-neutral-400 rounded-xl px-4 py-2 scale-90 text-neutral-100 hover:bg-neutral-500">Reset</button>
+    </div>
+    <div class="flex mt-4">
+        <div>
+            <h1 class="text-center">Brush color</h1>
+            <div class="flex">
+                <input id="colorClrPicker" type="color" class="p-1 h-10 w-14 block bg-white border border-gray-200 cursor-pointer rounded-lg disabled:opacity-50 disabled:pointer-events-none" id="hs-color-input" value="#2563eb" title="Choose your color">
+                <button id="selectClrBtn" class="ml-2 bg-neutral-400 rounded-xl px-5 py-2 scale-90 text-neutral-100 hover:bg-neutral-500">Select</button>
+            </div>
+        </div>
+        <div class="ml-4">
+            <h1 class="text-center">Background color</h1>
+            <div class="flex">
+                <input id="colorBgPicker" type="color" class="p-1 h-10 w-14 block bg-white border border-gray-200 cursor-pointer rounded-lg disabled:opacity-50 disabled:pointer-events-none" id="hs-color-input" value="#2563eb" title="Choose your color">
+                <button id="selectBgBtn" class="ml-2 bg-neutral-400 rounded-xl px-5 py-2 scale-90 text-neutral-100 hover:bg-neutral-500">Select</button>
+            </div>
+        </div>
+    </div>
+    <div id="container" class="no-drag w-[720px] h-[720px] mt-4 flex flex-wrap">
+
+    </div>
+    <script src="/dist/script.js"></script>
+</body>
+</html>
