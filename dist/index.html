@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="/src/output.css">
 </head>
 <style>
-    .no-drag {
-    user-select: none;
-    -webkit-user-drag: none;
-    -moz-user-drag: none;
-    -ms-user-drag: none;
-    cursor: default;
-}
+    .no-drag { /*styles to disable dragging */
+        user-select: none;
+        -webkit-user-drag: none;
+        -moz-user-drag: none;
+        -ms-user-drag: none;
+        cursor: default;
+    }
 </style>
 <body class="flex justify-center items-center flex-col bg-neutral-200 h-screen">
     <div class="flex">
         <input id="squaresInput" type="text" class="py-3 px-4 rounded-lg text-sm" placeholder="Enter number of squares">
         <button id="confirmBtn" class="ml-8 bg-neutral-400 rounded-xl px-4 py-2 scale-90 text-neutral-100 hover:bg-neutral-500">Confirm</button>
         <button id="resetBtn" class="ml-2 bg-neutral-400 rounded-xl px-4 py-2 scale-90 text-neutral-100 hover:bg-neutral-500">Reset</button>
+        <button id="saveBtn" class="ml-2 bg-neutral-400 rounded-xl px-5 py-2 scale-90 text-neutral-100 hover:bg-neutral-500">Save</button>
     </div>
     <div class="flex mt-4">
         <div>
@@ -37,9 +38,7 @@
             </div>
         </div>
     </div>
-    <div id="container" class="no-drag w-[720px] h-[720px] mt-4 flex flex-wrap">
-
-    </div>
+    <div id="container" class="no-drag w-[720px] h-[720px] mt-4 flex flex-wrap"></div>
     <script src="/dist/script.js"></script>
 </body>
 </html>
